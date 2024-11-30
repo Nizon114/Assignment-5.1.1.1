@@ -1,0 +1,36 @@
+<div class="container" style="margin-top: 60px;">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Add a New Post</h2>
+            <hr />
+            <form action="/posts/add" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="featureImage">Feature Image:</label>
+                    <input type="file" id="featureImage" name="featureImage" class="form-control-file">
+                </div>
+                <div class="form-group">
+                    <label for="title">Post Title:</label>
+                    <input type="text" id="title" name="title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="body">Post Body:</label>
+                    <textarea id="body" name="body" class="form-control" rows="8" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" class="form-control" required>
+                        {{#each categories}}
+                        <option value="{{this.id}}">{{this.category}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="published" name="published" class="form-check-input">
+                    <label for="published" class="form-check-label">Publish this post</label>
+                </div>
+                <br />
+                <button type="submit" class="btn btn-primary">Add Post</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,167 @@
+/* General Text Styles */
+p {
+    color: #b3b3b3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+
+h2 {
+    color: #00cc66;
+}
+
+/* List Group Styles */
+.list-group-item {
+    color: #000000 !important;
+    background-color: #ffffff;
+    border: none;
+}
+
+.list-group-item:hover {
+    color: #ffffff !important;
+    background-color: #dbdbdb;
+}
+
+.list-group-item:active,
+.list-group-item:focus {
+    color: #000000 !important;
+    background-color: #333 !important;
+}
+
+ul.list-group a {
+    color: #000000 !important;
+    text-decoration: none;
+}
+
+ul.list-group a:hover {
+    color: #ffffff !important;
+    background-color: #333 !important;
+}
+
+ul.list-group a:active,
+ul.list-group a:focus {
+    color: #000000 !important;
+    background-color: #333 !important;
+}
+
+ul.list-group a {
+    text-decoration: none;
+}
+
+/* Image Styles */
+img.img-responsive {
+    border-radius: 5px;
+}
+
+/* Post Details */
+.post-details {
+    color: #b3b3b3;
+}
+
+/* Button Styles */
+.btn {
+    color: #ffffff;
+    background-color: #555555;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    color: #ffffff;
+    background-color: #333333;
+}
+
+.btn:focus {
+    outline: 2px solid #00cc66;
+}
+
+/* Footer */
+footer {
+    color: #b3b3b3;
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Form Input Styles */
+input[type="text"],
+input[type="password"],
+textarea {
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #555555;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #00cc66;
+    outline: none;
+}
+
+::placeholder {
+    color: #999999;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #222;
+    border-bottom: 1px solid #444;
+}
+
+.navbar a {
+    color: #b3b3b3;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+}
+
+.navbar a.active {
+    color: #00cc66;
+    font-weight: bold;
+}
+
+/* Card Styles */
+.card {
+    background-color: #333333;
+    color: #b3b3b3;
+    border: none;
+}
+
+.card-title {
+    color: #ffffff;
+}
+
+.card a {
+    color: #00cc66;
+}
+
+.card a:hover {
+    color: #ffffff;
+}
+
+/* Table Styles */
+.table {
+    color: #b3b3b3;
+    background-color: #333333;
+}
+
+.table th {
+    color: #ffffff;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #444444;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #444444;
+}
+
+/* Animation for All Elements */
+* {
+    transition: all 0.3s ease-in-out;
+}
