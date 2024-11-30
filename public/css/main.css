@@ -1,4 +1,4 @@
-/* General Text Styles */
+
 p {
     color: #b3b3b3;
 }
@@ -11,7 +11,6 @@ h2 {
     color: #00cc66;
 }
 
-/* List Group Styles */
 .list-group-item {
     color: #000000 !important;
     background-color: #ffffff;
@@ -49,17 +48,14 @@ ul.list-group a {
     text-decoration: none;
 }
 
-/* Image Styles */
 img.img-responsive {
     border-radius: 5px;
 }
 
-/* Post Details */
 .post-details {
     color: #b3b3b3;
 }
 
-/* Button Styles */
 .btn {
     color: #ffffff;
     background-color: #555555;
@@ -76,7 +72,6 @@ img.img-responsive {
     outline: 2px solid #00cc66;
 }
 
-/* Footer */
 footer {
     color: #b3b3b3;
     background-color: #222;
@@ -84,7 +79,6 @@ footer {
     text-align: center;
 }
 
-/* Form Input Styles */
 input[type="text"],
 input[type="password"],
 textarea {
@@ -104,7 +98,6 @@ textarea:focus {
     color: #999999;
 }
 
-/* Navbar Styles */
 .navbar {
     background-color: #222;
     border-bottom: 1px solid #444;
@@ -124,7 +117,6 @@ textarea:focus {
     font-weight: bold;
 }
 
-/* Card Styles */
 .card {
     background-color: #333333;
     color: #b3b3b3;
@@ -143,7 +135,6 @@ textarea:focus {
     color: #ffffff;
 }
 
-/* Table Styles */
 .table {
     color: #b3b3b3;
     background-color: #333333;
@@ -161,7 +152,6 @@ textarea:focus {
     border-bottom: 1px solid #444444;
 }
 
-/* Animation for All Elements */
 * {
     transition: all 0.3s ease-in-out;
 }

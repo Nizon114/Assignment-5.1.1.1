@@ -1,5 +1,16 @@
-require('dotenv').config(); // Load environment variables
+/*********************************************************************************
+*  BTI325 – Assignment 05
+*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  No part of this
+*  assignment has been copied manually or electronically from any other source (including web sites) or 
+*  distributed to other students.
+* 
+*  Name: Nizon Student           ID: 107229213              Date: Nov 29, 2024
+*
+*  Online (Vercel) Link: https://assignment-5-woad.vercel.app/
+*
+********************************************************************************/ 
 
+require('dotenv').config();
 const express = require('express');
 const blogData = require("./blog-service");
 const multer = require("multer");
@@ -12,7 +23,6 @@ const stripJs = require('strip-js');
 const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
 
-// Cloudinary configuration
 cloudinary.config({
     cloud_name: process.env.CLOUD_NAME,
     api_key: process.env.CLOUD_API_KEY,
@@ -49,7 +59,6 @@ app.set('view engine', '.hbs');
 
 app.use(express.static('public'));
 
-// Middleware for handling form data
 app.use(express.urlencoded({ extended: true }));
 
 app.use(function (req, res, next) {
@@ -59,7 +68,6 @@ app.use(function (req, res, next) {
     next();
 });
 
-// Routes
 app.get('/', (req, res) => {
     res.redirect("/blog");
 });

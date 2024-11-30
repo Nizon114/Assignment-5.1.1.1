@@ -1,8 +1,7 @@
-require('dotenv').config(); // Load environment variables
+require('dotenv').config();
 
 const Sequelize = require('sequelize');
 
-// Set up Sequelize connection
 const sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
@@ -18,7 +17,6 @@ const sequelize = new Sequelize(
     }
 );
 
-// Define models
 const Post = sequelize.define('Post', {
     body: Sequelize.TEXT,
     title: Sequelize.STRING,
@@ -31,7 +29,6 @@ const Category = sequelize.define('Category', {
     category: Sequelize.STRING,
 });
 
-// Relationships
 Post.belongsTo(Category, { foreignKey: 'category' });
 
 module.exports = {
