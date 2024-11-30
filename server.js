@@ -22,6 +22,7 @@ const stripJs = require('strip-js');
 const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
 
+// Configure Cloudinary
 cloudinary.config({
     cloud_name: process.env.CLOUD_NAME,
     api_key: process.env.CLOUD_API_KEY,
@@ -31,6 +32,7 @@ cloudinary.config({
 
 const upload = multer();
 
+// Configure Handlebars
 app.engine(".hbs", exphbs.engine({
     extname: ".hbs",
     helpers: {
@@ -56,10 +58,13 @@ app.engine(".hbs", exphbs.engine({
 
 app.set('view engine', '.hbs');
 
+// Serve static files
 app.use(express.static('public'));
 
+// Middleware for form data
 app.use(express.urlencoded({ extended: true }));
 
+// Middleware to set active route
 app.use(function (req, res, next) {
     let route = req.path.substring(1);
     app.locals.activeRoute = (route == "/") ? "/" : "/" + route.replace(/\/(.*)/, "");
@@ -67,6 +72,7 @@ app.use(function (req, res, next) {
     next();
 });
 
+// Routes
 app.get('/', (req, res) => {
     res.redirect("/blog");
 });
@@ -203,10 +209,11 @@ app.use((req, res) => {
     res.status(404).render("404");
 });
 
+// Initialize database and start the server
 blogData.initialize().then(() => {
     app.listen(HTTP_PORT, () => {
-        console.log('server listening on: ' + HTTP_PORT);
+        console.log(`Server listening on: ${HTTP_PORT}`);
     });
 }).catch((err) => {
-    console.log(err);
+    console.error(err);
 });
